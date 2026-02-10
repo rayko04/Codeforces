@@ -2,12 +2,8 @@
 #include <vector>
 
 void sol(long long a, long long b, long long n, std::vector<int>& res) {
-    if(b*n > a) {
-        if(b >= a)
-            res.push_back(1);
-        else
-            res.push_back(2);
-    }
+    if(b*n > a && b < a)
+        res.push_back(2);
     else
         res.push_back(1);
 }
